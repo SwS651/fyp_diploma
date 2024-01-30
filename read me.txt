@@ -1,0 +1,112 @@
+pip install flask 
+pip install Flask-SQLAlchemy 
+
+
+                           <div class="card card-outline">
+
+                                <div class="card-header">
+                                    <h3 class="card-title">Instruction</h3>
+            
+                                </div>
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <input type="file" id="uploadBtn" style="display: none;">
+                                        <input type="file" name="file" id="uploadfile" style="display: none;" />
+                                        <input type="file" name="file" id="downloadfile" style="display: none;" />
+            
+                                        <div class="btn-group">
+                                            <button type="button" onclick="exec(this)" id="bold" class="fas fa-bold"></button>
+                                            <button type="button" onclick="exec(this)" id="italic" class="fas fa-italic"></button>
+                                            <button type="button" onclick="exec(this)" id="underline"
+                                                class="fas fa-underline"></button>
+                                            <select id="fontsize" class="custom-select">
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                                <option value="11">11</option>
+                                                <option value="12">12</option>
+                                                <option value="14">14</option>
+                                                <option value="16">16</option>
+                                                <option value="18">18</option>
+            
+                                                <option value="20">20</option>
+                                                <option value="22">22</option>
+                                                <option value="24">24</option>
+                                                <option value="26">26</option>
+                                                <option value="28">28</option>
+                                                <option value="36">36</option>
+                                                <option value="48">48</option>
+                                                <option value="72">72</option>
+            
+                                            </select>
+                                            <button type="button" onclick="exec(this)" id="justifyLeft"
+                                                class="fas fa-align-left"></button>
+                                            <button type="button" onclick="exec(this)" id="justifyCenter"
+                                                class="fas fa-align-center"></button>
+                                            <button type="button" onclick="exec(this)" id="justifyFull"
+                                                class="fas fa-align-justify"></button>
+                                            <button type="button" onclick="exec(this)" id="justifyRight"
+                                                class="fas fa-align-right"></button>
+                                            <button type="button" onclick="uploadImg()" id='InsertImage'
+                                                class="fas fa-images"></button>
+                                            <button type="button" onclick="exec(this)" id='indent' class="fas fa-indent"></button>
+                                            <button type="button" onclick="exec(this)" id='outdent' class="fas fa-outdent"></button>
+                                            <button type="button" onclick="exec(this)" id="insertOrderedList"
+                                                class="fas fa-list-ol"></button>
+                                            <button type="button" onclick="exec(this)" id="insertUnorderedlist"
+                                                class="fas fa-list-ul"></button>
+                                            <br />
+                                            <button type="button" onclick="exec(this)" id="insertHorizontalRule"
+                                                class="fas fa-ruler-horizontal"></button>
+                                            <button type="button" onclick="exec(this)" id="undo" class="fas fa-undo"></button>
+                                            <button type="button" onclick="exec(this)" id="redo" class="fas fa-redo"></button>
+                                            <button type="button" onclick="exec(this,'<p>')" id="formatBlock"
+                                                class="fas fa-paragraph"></button>
+                                            <button type="button" onclick="createlink()" id='createLink'
+                                                class="fas fa-link"></button>
+                                            <button type="button" onclick="exec(this)" id='unlink' class="fas fa-unlink"></button>
+                                            <button type="button" onclick="downloadInnerHtml('testss.txt');"
+                                                class="fas fa-file-download"></button>
+                                            <button type="button" onclick="openfile();" class="fas fa-file-upload"></button>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div id="textarea" contenteditable="true" ></div>
+                                    </div>
+            
+                                </div>
+                            </div>
+
+
+
+
+<!-- Question List -->
+                                <div class="col-3">
+                                    <div class="card -card-outline">
+                                        <div class="card-header">
+                                            <h4>Question List</h4>
+                                        </div>
+                                        <div class="card-body">
+                                            <form action="/submit" method="POST" id="listForm">
+                                                <!-- <input type="text" id="instruction" value=""> -->
+                                                <div class="form-group">
+                                                    <ul class="nav flex-column" id="ques-List" style="cursor: pointer;">
+                                                        <li class="nav-item" value="*Question 1" questext="" time="10s" type="MCQ" anstext="" anscheck="true,false,false,false" point="1">*Question 1</li>
+                                                    </ul>
+                                                </div>
+                                                
+                                                <div class="form-group">
+                                                    <label>Quiz Name</label>
+                                                    <input type="text" class="form-control" id="quiz-name" placeholder="Enter Quiz name..." required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Attempts</label>
+                                                    <input type="number" class="form-control" id="attempts" value="1" min="1">
+                                                </div>
+                                                
+                                            </form>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
